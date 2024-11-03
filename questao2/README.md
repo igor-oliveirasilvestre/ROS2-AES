@@ -75,7 +75,7 @@ docker run -it \
 Por fim, para iniciar o Docker a partir de um container já existente, use o comando:
 
 ```bash
-docker start -ai questao2
+docker run -it questao2
 ```
 ## Para buildar os pacotes e dar inicio aos testes
 ```bash
