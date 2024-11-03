@@ -90,7 +90,11 @@ Para executar o monitor de memória RAM basta chamar ele utilizando o ros, de fo
 ros2 run monitor mempub
 ```
 
-Para verificar se as mensagens estão sendo publicadas corretamente, você pode abrir outro terminal (ou outra aba do terminal) e executar o seguinte comando para escutar o tópico:
+Para verificar se as mensagens estão sendo publicadas corretamente, em outro terminal acesse o docker:
+```bash
+docker run -it questao2
+```
+E execute o seguinte comando para escutar o tópico:
 
 ```bash
 ros2 topic echo /memory_usage
