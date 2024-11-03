@@ -70,14 +70,13 @@ docker run -it \
   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
   questao2
 ```
-#### Passo 4: Iniciar o Docker
 
-Por fim, para iniciar o Docker a partir de um container já existente, use o comando:
+Opcionalmente, para iniciar o Docker a partir de um container já existente, use o comando:
 
 ```bash
 docker run -it questao2
 ```
-## Para buildar os pacotes e dar inicio aos testes
+#### Passo 4: Buildar os pacotes e para dar inicio aos testes
 ```bash
 cd /ros2_ws
 colcon build
