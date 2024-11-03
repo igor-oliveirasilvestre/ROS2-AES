@@ -1,3 +1,8 @@
+# Questao 2
+
+Este projeto fornece instruções e arquivos para implementar um sistema de decodificação utilizando o algoritmo AES (Advanced Encryption Standard) em modo ECB. A criptografia AES é amplamente utilizada em sistemas embarcados para garantir a segurança de dados. O código inclui testes unitários para validar o funcionamento da decodificação em diferentes cenários, assegurando a robustez do software
+
+
 ## Pré-requisitos
 
 - **python3**
