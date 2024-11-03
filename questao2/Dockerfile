@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 # Configure o locale
 RUN locale-gen en_US en_US.UTF-8 && \
     update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-ENV LANG = en_US.UTF-8
+ENV LANG en_US.UTF-8
 
 # Adicione o repositório do ROS2 e a chave GPG
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add - && \
