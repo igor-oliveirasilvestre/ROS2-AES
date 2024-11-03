@@ -54,7 +54,7 @@ Baixe o arquivo Dockerfile e coloque-o em uma pasta, por exemplo, ~/questao2/.
 
 #### Passo 2: Construir a imagem Docker
 
-Abra um terminal no diretório onde o Dockerfile se encontra e execute o comando para construir o docker com passando como nome questao2:
+Abra um terminal no diretório onde o Dockerfile se encontra e execute o comando para construir o docker de nome questao2:
 
 ```bash
 docker build -t questao2 .
