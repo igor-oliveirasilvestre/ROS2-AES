@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 # Configure o locale
 RUN locale-gen en_US en_US.UTF-8 && \
     update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-ENV LANG en_US.UTF-8
+ENV LANG = en_US.UTF-8
 
 # Adicione o repositório do ROS2 e a chave GPG
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add - && \
@@ -52,9 +52,14 @@ WORKDIR /ros2_ws
 # Crie um workspace ROS2
 RUN mkdir -p src && cd src
 
-# Clone your ROS packages from Git
-RUN git clone https://github.com/igor-oliveirasilvestre/ROS2-AES/questao2.git /ros2_ws/src/
+# Clone the repository into a temporary directory
+RUN git clone https://github.com/igor-oliveirasilvestre/ROS2-AES.git /tmp/ROS2-AES
 
+# Copy contents from the questao2 folder to /ros2_ws/
+RUN cp -r /tmp/ROS2-AES/questao2/* /ros2_ws/
+
+# Clean up by removing the cloned repository
+RUN rm -rf /tmp/ROS2-AES
 
 # Copie o código dos pacotes para o workspace ROS2 (adicione os scripts localmente depois de construir a imagem)
 COPY . /ros2_ws/src/
