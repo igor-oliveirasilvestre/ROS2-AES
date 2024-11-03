@@ -61,8 +61,8 @@ RUN cp -r /tmp/ROS2-AES/questao2/* /ros2_ws/
 # Clean up by removing the cloned repository
 RUN rm -rf /tmp/ROS2-AES
 
-# Copie o código dos pacotes para o workspace ROS2 (adicione os scripts localmente depois de construir a imagem)
-COPY . /ros2_ws/src/
+# Se quiser adicionar scripts localmente remova o comentario abaixo e modifique conforme necessario)
+#COPY . /ros2_ws/src/
 
 # Construa o workspace ROS2
 RUN /bin/bash -c "source /opt/ros/$ROS_DISTRO/setup.bash && colcon build"
