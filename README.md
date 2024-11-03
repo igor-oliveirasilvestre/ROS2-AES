@@ -1,2 +1,2 @@
 # ROS2-AES
-Study of ROS2 usage and AES encryption
+Tarefas desenvolvidas durante o PS. Cada diretório tem contém um README.md para auxiliar na instalação das dependências e para guiar o uso dos códigos desenvolvidos.
