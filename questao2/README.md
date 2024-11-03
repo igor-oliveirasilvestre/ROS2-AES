@@ -50,18 +50,23 @@ Para utilizar um Dockerfile específico, siga os passos abaixo:
 
 #### Passo 1: Baixar o Dockerfile
 
-Baixe o arquivo Dockerfile e coloque-o em uma pasta, por exemplo, ~/questao2/. Se você usar outro nome para o diretório, as linhas de comando a seguir precisam ser atualizadas com o novo diretório (substituindo questao2 pelo nome do diretório que você utilizou).
+Baixe o arquivo Dockerfile e coloque-o em uma pasta, por exemplo, ~/questao2/.
 
 #### Passo 2: Construir a imagem Docker
 
-Abra um terminal no diretório onde o Dockerfile se encontra e execute o comando:
+Abra um terminal no diretório onde o Dockerfile se encontra e execute o comando para construir o docker com passando como nome questao2:
 
 ```bash
 docker build -t questao2 .
 ```
 #### Passo 3: Executar o container Docker
 
-Após a construção do Docker, execute o seguinte comando para iniciar o container:
+Para iniciar o Docker a partir de um container, use o comando:
+
+```bash
+docker run -it questao2
+```
+Caso tenha problemas com o comando acima, teste o seguinte comando para iniciar o container:
 ```bash
 docker run -it \
   --name questao2 \
@@ -71,11 +76,6 @@ docker run -it \
   questao2
 ```
 
-Opcionalmente, para iniciar o Docker a partir de um container já existente, use o comando:
-
-```bash
-docker run -it questao2
-```
 #### Passo 4: Buildar os pacotes e para dar inicio aos testes
 ```bash
 cd /ros2_ws
